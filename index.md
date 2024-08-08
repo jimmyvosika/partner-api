@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Authentication
 layout: home
 ---
 
