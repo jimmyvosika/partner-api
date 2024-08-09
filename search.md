@@ -42,7 +42,7 @@ Content-Type: application/json
       {
         "manufacturer": "Hisense",
         "part_number": "RUNTK0488FVZZ",
-		"qty": 1,
+        "qty": 1,
         "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2021-10-25-20-16-52-ShopJimmy-RUNTK0488FVZZ-TOP.jpg"
       }
     ],
@@ -60,7 +60,7 @@ Content-Type: application/json
       {
         "manufacturer": "ONN",
         "part_number": "RUNTK0506FVZA",
-		"qty": 1,
+        "qty": 1,
         "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2022-12-23-01-20-34-ShopJimmy-RUNTK0506FVZA-TOP.jpg"
       }
     ],
@@ -78,31 +78,31 @@ Content-Type: application/json
       {
         "manufacturer": "Element",
         "part_number": "1246663",
-		"qty": 1,
+        "qty": 1,
         "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2022-06-30-23-38-32-ShopJimmy-1246663-TOP.jpg"
       },
       {
         "manufacturer": "Onn",
         "part_number": "M22013-MT",
-		"qty": 1,
+        "qty": 1,
         "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2022-12-23-01-07-49-ShopJimmy-M22013-MT-TOP.jpg"
       },
       {
         "manufacturer": "Onn",
         "part_number": "514C6508M04",
-		"qty": 1,
+        "qty": 1,
         "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2022-12-23-01-01-14-ShopJimmy-514C6508M04-TOP.jpg"
       },
       {
         "manufacturer": "ONN",
         "part_number": "RUNTK0506FVZA",
-		"qty": 1,
+        "qty": 1,
         "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2022-12-23-01-20-34-ShopJimmy-RUNTK0506FVZA-TOP.jpg"
       },
       {
         "manufacturer": "Onn",
         "part_number": "514Q50A0M15",
-		"qty": 1,
+        "qty": 1,
         "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2022-12-23-01-10-59-ShopJimmy-514Q50A0M15-TOP.jpg"
       }
     ],
