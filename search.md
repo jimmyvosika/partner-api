@@ -8,6 +8,11 @@ layout: default
 To perform search operations using the Partner API, include the Authorization header in your HTTP request. 
 The Authorization header should contain a Bearer token, which is necessary to authenticate your search requests.
 
+## Usage
+Search queries go into the "q" query parameter of the url. Results are limited to 100. 
+There is no pagination. You must refine your search query to filter further.
+The "id" is what you will use to place an order for that listing in the next step.
+
 ### GET Request to search parts
 ```plaintext
 GET /api/partner/v1/search?q=PaRtNum83r HTTP/1.1
