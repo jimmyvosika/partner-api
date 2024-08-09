@@ -1,0 +1,498 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Partner API",
+    "version": "1.0.0",
+    "description": "API for managing client tokens, searching listings, and creating orders."
+  },
+  "servers": [
+    {
+      "url": "https://api.example.com"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schemas": {
+      "TokenRequest": {
+        "type": "object",
+        "required": ["client_id", "client_secret"],
+        "properties": {
+          "client_id": {
+            "type": "string",
+            "description": "Client ID must be a 32-character string.",
+            "example": "12345678901234567890123456789012"
+          },
+          "client_secret": {
+            "type": "string",
+            "description": "Client Secret must be a 40-character string.",
+            "example": "1234567890123456789012345678901234567890"
+          }
+        }
+      },
+      "TokenResponse": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "description": "JWT access token."
+          },
+          "expires": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Token expiration date and time."
+          }
+        }
+      },
+      "OrderItem": {
+        "type": "object",
+        "required": ["listing_id", "qty"],
+        "properties": {
+          "listing_id": {
+            "type": "integer",
+            "description": "The ID of the listing."
+          },
+          "qty": {
+            "type": "integer",
+            "description": "Quantity of the item to order."
+          }
+        }
+      },
+      "OrderRequest": {
+        "type": "object",
+        "required": ["ship_method", "destination_email", "destination_telephone", "items"],
+        "properties": {
+          "po_number": {
+            "type": "string",
+            "description": "Purchase Order number.",
+            "maxLength": 45
+          },
+          "ship_method": {
+            "type": "string",
+            "description": "Preferred shipping method.",
+            "maxLength": 45
+          },
+          "delivery_instructions": {
+            "type": "string",
+            "description": "Delivery instructions.",
+            "maxLength": 45
+          },
+          "destination_email": {
+            "type": "string",
+            "description": "Destination email address."
+          },
+          "destination_name": {
+            "type": "string",
+            "description": "Name of the destination contact.",
+            "maxLength": 45
+          },
+          "destination_address_1": {
+            "type": "string",
+            "description": "First line of the destination address.",
+            "maxLength": 50
+          },
+          "destination_address_2": {
+            "type": "string",
+            "description": "Second line of the destination address.",
+            "maxLength": 35
+          },
+          "destination_city": {
+            "type": "string",
+            "description": "Destination city.",
+            "maxLength": 45
+          },
+          "destination_state": {
+            "type": "string",
+            "description": "Destination state.",
+            "maxLength": 2
+          },
+          "destination_postcode": {
+            "type": "string",
+            "description": "Destination postal code.",
+            "maxLength": 15
+          },
+          "destination_country": {
+            "type": "string",
+            "description": "Destination country code.",
+            "maxLength": 2
+          },
+          "destination_telephone": {
+            "type": "string",
+            "description": "Destination telephone number.",
+            "maxLength": 25
+          },
+          "destination_business": {
+            "type": "string",
+            "description": "Destination business name.",
+            "maxLength": 45
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          }
+        }
+      },
+      "OrderResponse": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "description": "Reference number for the created order."
+          }
+        }
+      },
+      "OrderStatusResponse": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "description": "Reference number of the order."
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation date of the order."
+          },
+          "shipped_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Shipment date of the order."
+          },
+          "canceled_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Cancellation date of the order."
+          },
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "created_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "Creation date of the package."
+                },
+                "dimensions": {
+                  "type": "string",
+                  "description": "Dimensions of the package."
+                },
+                "weight_lbs": {
+                  "type": "number",
+                  "description": "Weight of the package in pounds."
+                },
+                "carrier": {
+                  "type": "string",
+                  "description": "Carrier of the package."
+                },
+                "service": {
+                  "type": "string",
+                  "description": "Service type of the carrier."
+                },
+                "tracking_number": {
+                  "type": "string",
+                  "description": "Tracking number of the package."
+                },
+                "cost_usd": {
+                  "type": "number",
+                  "description": "Cost of shipping in USD."
+                },
+                "destination_name": {
+                  "type": "string",
+                  "description": "Name of the destination contact."
+                },
+                "destination_address_1": {
+                  "type": "string",
+                  "description": "First line of the destination address."
+                },
+                "destination_address_2": {
+                  "type": "string",
+                  "description": "Second line of the destination address."
+                },
+                "destination_city": {
+                  "type": "string",
+                  "description": "Destination city."
+                },
+                "destination_state": {
+                  "type": "string",
+                  "description": "Destination state."
+                },
+                "destination_postcode": {
+                  "type": "string",
+                  "description": "Destination postal code."
+                },
+                "destination_country": {
+                  "type": "string",
+                  "description": "Destination country code."
+                },
+                "destination_telephone": {
+                  "type": "string",
+                  "description": "Destination telephone number."
+                },
+                "destination_business": {
+                  "type": "string",
+                  "description": "Destination business name."
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "listing_id": {
+                        "type": "integer",
+                        "description": "Listing ID of the item."
+                      },
+                      "sku": {
+                        "type": "string",
+                        "description": "SKU of the item."
+                      },
+                      "qty": {
+                        "type": "integer",
+                        "description": "Quantity of the item in the package."
+                      },
+                      "serial": {
+                        "type": "string",
+                        "description": "Serial number of the item."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ],
+  "paths": {
+    "/token": {
+      "post": {
+        "summary": "Get access token",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TokenRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Token generated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid client details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/order": {
+      "post": {
+        "summary": "Create an order",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Order created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid order details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/order/{reference}": {
+      "get": {
+        "summary": "Get order status",
+        "parameters": [
+          {
+            "name": "reference",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Reference number of the order"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Order status retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderStatusResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Order not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -19,4 +19,8 @@ Each order request must include the corresponding shipping service name and carr
 All fulfilled orders will be invoiced electronically at a later time. 
 The billing address for each order will reference the API account information associated with your account.
 
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
+**Interact with our API using Swagger.io (link below)**
+
+----
+
+[download our swagger.json]: https://shopjimmy.github.io/partner-api/swagger.json
