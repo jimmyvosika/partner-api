@@ -1,5 +1,5 @@
 ---
-title: Place Order
+title: Order Status
 layout: default
 ---
 
