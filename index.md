@@ -19,7 +19,8 @@ Each order request must include the corresponding shipping service name and carr
 All fulfilled orders will be invoiced electronically at a later time. 
 The billing address for each order will reference the API account information associated with your account.
 
-**Interact with our API using Swagger.io (link below)**
+**Interact with our API using Swagger.io**
+[download our swagger.json]
 
 ----
 
