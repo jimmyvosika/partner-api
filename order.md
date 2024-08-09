@@ -5,11 +5,14 @@ layout: default
 
 ## API Authentication
 
-To perform search operations using the Partner API, include the Authorization header in your HTTP request. 
+To perform place order operation using the Partner API, include the Authorization header in your HTTP request. 
 The Authorization header should contain a Bearer token, which is necessary to authenticate your search requests.
 
 ## Usage
+Most of the information we need has already been saved to your account at this point.
+All we need here is the destination information, ship method, and item information.
 
+Optionally include a PO number and we will do our best to add it to the shipping label.
 
 ### POST Request to place order
 ```plaintext
