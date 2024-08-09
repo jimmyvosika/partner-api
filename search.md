@@ -31,6 +31,13 @@ Content-Type: application/json
     "price": 19.99,
     "important": "RUNTK0488FVZZ can be found on barcode sticker on board..\\r\\n\\r\\nIMPORTANT: Horizontal lines on the screen are virtually NEVER caused by a bad T-con board. Horizontal lines indicate a defective LCD panel (screen).",
     "qty": 1,
+    "parts_included": [
+      {
+        "manufacturer": "Hisense",
+        "part_number": "RUNTK0488FVZZ",
+        "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2021-10-25-20-16-52-ShopJimmy-RUNTK0488FVZZ-TOP.jpg"
+      }
+    ],
     "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2021-10-25-20-16-52-ShopJimmy-RUNTK0488FVZZ-TOP.jpg",
     "score": 0
   },
@@ -41,6 +48,13 @@ Content-Type: application/json
     "price": 28.79,
     "important": "",
     "qty": 1,
+    "parts_included": [
+      {
+        "manufacturer": "ONN",
+        "part_number": "RUNTK0506FVZA",
+        "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2022-12-23-01-20-34-ShopJimmy-RUNTK0506FVZA-TOP.jpg"
+      }
+    ],
     "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2022-12-23-01-20-34-ShopJimmy-RUNTK0506FVZA-TOP.jpg",
     "score": 0
   },
@@ -51,6 +65,33 @@ Content-Type: application/json
     "price": 40.81,
     "important": "PLEASE NOTE: There are several versions of this TV model.  Please match the boards shown to the originals in your TV before ordering.",
     "qty": 1,
+    "parts_included": [
+      {
+        "manufacturer": "Element",
+        "part_number": "1246663",
+        "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2022-06-30-23-38-32-ShopJimmy-1246663-TOP.jpg"
+      },
+      {
+        "manufacturer": "Onn",
+        "part_number": "M22013-MT",
+        "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2022-12-23-01-07-49-ShopJimmy-M22013-MT-TOP.jpg"
+      },
+      {
+        "manufacturer": "Onn",
+        "part_number": "514C6508M04",
+        "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2022-12-23-01-01-14-ShopJimmy-514C6508M04-TOP.jpg"
+      },
+      {
+        "manufacturer": "ONN",
+        "part_number": "RUNTK0506FVZA",
+        "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2022-12-23-01-20-34-ShopJimmy-RUNTK0506FVZA-TOP.jpg"
+      },
+      {
+        "manufacturer": "Onn",
+        "part_number": "514Q50A0M15",
+        "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2022-12-23-01-10-59-ShopJimmy-514Q50A0M15-TOP.jpg"
+      }
+    ],
     "image": "https://801dd59dc9cd6819c753-9e5e71dc742d0580ead74c66470ed43a.ssl.cf2.rackcdn.com/2022-12-23-01-22-42-ShopJimmy-KIT-100071708-K1-TOP.jpg",
     "score": 0
   }
