@@ -13,7 +13,7 @@ Search queries go into the "q" query parameter of the url. Results are limited t
 There is no pagination. You must refine your search query to filter further.
 The "id" is what you will use to place an order for that listing in the next step.
 
-**These 3 characters are stripped from query and search index: / . -**
+**These 3 characters are stripped from query and search index: `/ . -`**
 So you don't need to perform search in several ways. All searches are partials surrounded by % (wildcards) and are case insensitive.
 
 Some of our listings contain multiple parts (kits). So please be aware of the contents of the listing.
