@@ -16,6 +16,8 @@ The "id" is what you will use to place an order for that listing in the next ste
 **These 3 characters are stripped from query and search index: / . -**
 So you don't need to perform search in several ways. All searches are partials surrounded by % (wildcards) and are case insensitive.
 
+Some of our listings contain multiple parts (kits). So please be aware of the contents of the listing.
+
 ### GET Request to search parts
 ```plaintext
 GET /api/partner/v1/search?q=PaRtNum83r HTTP/1.1
