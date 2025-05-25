@@ -36,13 +36,23 @@ payouts. Planned features include:
   map view) are shown.
 
 ## Outstanding Tasks
-
+- Implement supplier authentication and login pages.
+- Build a dashboard showing recent sales totals and best-selling parts with category or tag filters.
+- Display payout estimates that update with returns and include a per-part breakdown.
+- Provide return reporting with reasons, photo uploads, and counts of defective versus good boards.
+- Store supplier contracts with metadata and optional annual review dates.
+- Develop the performance scoring formula and show each supplier's score.
+- Allow suppliers to adjust consignment percentages and fee splits to improve that score.
+- Support admin payout approvals and integrate ACH payments when ready.
+- Hide end customer details by only showing destination city/state or a map.
+- Maintain a development server for ongoing portal testing.
 - Build the supplier dashboard and pages outlined above.
 - Implement the scoring formula and expose it to suppliers.
 - Allow suppliers to adjust consignment percentages and fee splits.
 - Finalize contract upload and storage with metadata for annual review.
 - Connect payment approvals to ACH once the banking integration is ready.
 - Provide a development server for ongoing testing.
+
 
 # just-the-docs-template
 
