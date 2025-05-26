@@ -85,6 +85,15 @@ Assuming [Jekyll] and [Bundler] are installed on your computer:
 
     The built site is stored in the directory `_site`.
 
+## Running checks locally
+
+You can lint Markdown files and validate the API specification with Node.js tools:
+
+```bash
+npx markdownlint "**/*.md"
+npx swagger-cli validate swagger.json
+```
+
 ## Publishing your built site on a different platform
 
 Just upload all the files in the directory `_site`.
