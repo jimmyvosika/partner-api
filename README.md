@@ -143,13 +143,31 @@ The GitHub Actions workflow that builds and deploys your site to Github Pages is
 4.  Modify the trigger so that only changes within the `docs` directory start the workflow. Otherwise, every change to your project (even those that don't affect the docs) would trigger a new site build and deploy.
 
     ```yaml
-    on:
-      push:
-        branches:
-          - "main"
-        paths:
-          - "docs/**"
-    ```
+   on:
+     push:
+       branches:
+         - "main"
+       paths:
+         - "docs/**"
+   ```
+
+## Contributing
+
+If you update the API, please also update the documentation.
+
+1. **Update `swagger.json`**
+   - Modify the OpenAPI specification to reflect your changes.
+   - Bump the version in `info.version` using [semantic versioning](https://semver.org/).
+
+2. **Revise Markdown files**
+   - Edit the guides in this repository so examples and descriptions match the new behavior.
+   - Double‑check that endpoints and parameters are accurate.
+
+3. **Provide a changelog entry**
+   - Document the new version and a short summary in `CHANGELOG.md`.
+   - Mention any breaking changes.
+
+Keeping these files in sync ensures developers can rely on the docs.
 
 ## Licensing and Attribution
 
