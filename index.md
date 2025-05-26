@@ -23,6 +23,8 @@ The billing address for each order will reference the API account information as
 
 [download our swagger.json]
 
+You can also preview planned features for our upcoming [supplier portal](supplier-portal.md).
+
 ----
 
 [download our swagger.json]: https://shopjimmy.github.io/partner-api/swagger.json
