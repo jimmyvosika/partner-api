@@ -87,7 +87,13 @@ Assuming [Jekyll] and [Bundler] are installed on your computer:
 
 ## Running checks locally
 
-You can lint Markdown files and validate the API specification with Node.js tools:
+Before running the lint or validation commands, install the required dependencies:
+
+```bash
+./setup.sh
+```
+
+Then you can lint Markdown files and validate the API specification with Node.js tools:
 
 ```bash
 npx markdownlint "**/*.md"
